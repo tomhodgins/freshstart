@@ -1,0 +1,313 @@
+/* FreshStart Toronto */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+::-moz-selection {
+  color: #fff;
+  text-shadow: #007931 1px 2px 2px;
+  background-color: #26ba62 !important;
+}
+::-webkit-selection {
+  color: #fff;
+  text-shadow: #007931 1px 2px 2px;
+  background-color: #26ba62 !important;
+}
+::selection {
+  color: #fff;
+  text-shadow: #007931 1px 2px 2px;
+  background-color: #26ba62 !important;
+}
+html {
+  color: white;
+  min-height: 100vh;
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background: rgb(102,238,102);
+  background: -moz-linear-gradient(-45deg, rgba(102,238,102,1) 0%, rgba(51,153,51,1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(102,238,102,1) 0%,rgba(51,153,51,1) 100%);
+  background: linear-gradient(135deg, rgba(102,238,102,1) 0%,rgba(51,153,51,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ee66', endColorstr='#339933',GradientType=1 );
+  background: green;
+  background: -moz-linear-gradient(-45deg, green 0%, chartreuse 100%);
+  background: -webkit-linear-gradient(-45deg, green 0%,chartreuse 100%);
+  background: linear-gradient(135deg, green) 0%,chartreuse 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='green', endColorstr='chartreuse',GradientType=1 );
+}
+body {
+  margin: 0;
+  padding-top: 40px;
+  transition: padding .1s linear;
+}
+q:before {content: '\201c'}
+q:after  {content: '\201d'}
+q q:before {content: '\2018'}
+q q:after  {content: '\2019'}
+h1, h2, h3, h4, h5, h6 {
+  color: darkgreen;
+  margin: .5em 0;
+  font-weight: 600;
+  letter-spacing: .-03em;
+  line-height: 1.2;
+  font-family: 'Fira Sans', 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+}
+h1 {
+  color: #333;
+  font-size: 280%;
+  font-weight: 700;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 300%;
+}
+h3 {
+  font-size: 220%;
+}
+h4 {
+  font-size: 180%;
+}
+h5 {
+  font-size: 140%;
+}
+h6 {
+  font-size: 120%;
+}
+a {
+  color: darkgreen;
+  text-decoration: none;
+  outline: none !important;
+  transition: color .2s ease-in-out;
+}
+a:hover,
+a:focus {
+  color: green;
+}
+li {
+  font-size: 140%;
+  padding: .25em 0;
+  text-shadow: rgba(0,0,0,.3) 0 1px 2px;
+}
+p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 140%;
+  text-shadow: rgba(0,0,0,.3) 0 1px 2px;
+}
+* + p {
+  margin-top: .5em;
+}
+input,
+textarea {
+  width: 100%;
+  font-size: 140%;
+  margin-bottom: 1em;
+  padding: 10px 8px;
+}
+header {
+  background: white;
+  text-align: center;
+  padding: .5rem 0;
+  font-size: 120%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  box-shadow: rgba(0,0,0,.3) 0 0 30px;
+}
+header a {
+  display: inline-block;
+  color: black;
+  font-weight: 500;
+  padding: 0 .5rem;
+}
+header a.active {
+  color: darkgreen;
+}
+header a:hover,
+header a:focus {
+  color: green;
+}
+[data-button] {
+  border-radius: 4px !important;
+}
+[data-button]:hover,
+[data-button]:focus {
+  color: white !important;
+}
+[data-button]:active {
+  color: #eee !important;
+}
+#brand {
+  font-size: 16pt;
+  font-weight: 400;
+  letter-spacing: -.02em;
+}
+#brand strong {
+  font-weight: 900;
+}
+nav {
+  display: block;
+  width: 100%;
+}
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: darkgreen;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+aside {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+  transition: all .2s ease-in-out;
+  text-align: center;
+}
+aside h1,
+aside h2 {
+  display: inline-block;
+  margin: 0;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  background: rgba(0,0,0,.75);
+  color: white;
+  transition: all .2s ease-in-out;
+}
+aside h1 {
+  font-size: 175%;
+}
+aside h2 {
+  font-size: 350%;
+  line-height: 1;
+}
+aside a {
+  color: green;
+}
+aside a:hover,
+aside a:focus {
+  color: gold;
+}
+.toronto {
+  background-image: url('../img/toronto.jpg');
+}
+.refugees {
+  background-image: url('../img/refugees.jpg');
+}
+.about {
+  background-image: url('../img/about.jpg');
+  background-position: center 25%;
+}
+.help {
+  background-image: url('../img/help.jpg');
+  background-position: center 75%;
+}
+.contact {
+  background-image: url('../img/contact.jpg');
+  background-position: center bottom;
+}
+article {
+  background: white;
+  padding: 1rem;
+}
+blockquote,
+main {
+  padding: 0;
+  margin: 0;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 900px;
+}
+blockquote p {
+  font-size: 200%;
+  font-style: italic;
+  font-weight: 300;
+}
+blockquote p strong {
+  font-weight: 400;
+}
+@media (min-width: 500px) {
+  header {
+    text-align: right;
+    padding: 0;
+  }
+  header a {
+    padding: 1rem;
+  }
+  #brand {
+    position: absolute;
+    top: -1pt;
+    left: 0;
+    line-height: 1;
+  }
+  nav {
+    width: auto;
+  }
+  aside {
+    text-align: left;
+  }
+  aside h1 {
+    font-size: 200%;
+  }
+  aside h2 {
+    font-size: 350%;
+  }
+}
+@media (min-width: 930px) {
+  aside h1,
+  aside h2 {
+    margin-top: 25vh;
+    margin-bottom: 10vh;
+    font-size: 300%;
+    line-height: 1;
+  }
+  aside h2 {
+    font-size: 400%;
+  }
+}
+
+/* Responsive Videos */
+[data-video] {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+[data-video] * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
