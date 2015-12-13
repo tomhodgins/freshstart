@@ -27,23 +27,18 @@
   background-color: #26ba62 !important;
 }
 html {
-  color: white;
+  color: #555;
   min-height: 100vh;
   font-size: 10pt;
   line-height: 1.4;
   font-weight: 400;
   font-family: 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
-  background: rgb(102,238,102);
-  background: -moz-linear-gradient(-45deg, rgba(102,238,102,1) 0%, rgba(51,153,51,1) 100%);
-  background: -webkit-linear-gradient(-45deg, rgba(102,238,102,1) 0%,rgba(51,153,51,1) 100%);
-  background: linear-gradient(135deg, rgba(102,238,102,1) 0%,rgba(51,153,51,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ee66', endColorstr='#339933',GradientType=1 );
-  background: green;
-  background: -moz-linear-gradient(-45deg, green 0%, chartreuse 100%);
-  background: -webkit-linear-gradient(-45deg, green 0%,chartreuse 100%);
-  background: linear-gradient(135deg, green) 0%,chartreuse 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='green', endColorstr='chartreuse',GradientType=1 );
+background: #ffffff;
+background: -moz-linear-gradient(-45deg, #ffffff 0%, #eeeeee 100%);
+background: -webkit-linear-gradient(-45deg, #ffffff 0%,#eeeeee 100%);
+background: linear-gradient(135deg, #ffffff 0%,#eeeeee 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=1 );
 }
 body {
   margin: 0;
@@ -55,8 +50,9 @@ q:after  {content: '\201d'}
 q q:before {content: '\2018'}
 q q:after  {content: '\2019'}
 h1, h2, h3, h4, h5, h6 {
-  color: darkgreen;
+  color: #555;
   margin: .5em 0;
+  display: block;
   font-weight: 600;
   letter-spacing: .-03em;
   line-height: 1.2;
@@ -67,6 +63,13 @@ h1 {
   font-size: 280%;
   font-weight: 700;
   line-height: 1.2;
+}
+hr {
+  margin: 0;
+  height: 0;
+  padding: 0;
+  background: none;
+  border: none;
 }
 h2 {
   font-size: 300%;
@@ -96,13 +99,11 @@ a:focus {
 li {
   font-size: 140%;
   padding: .25em 0;
-  text-shadow: rgba(0,0,0,.3) 0 1px 2px;
 }
 p {
   margin: 0;
   font-weight: 400;
   font-size: 140%;
-  text-shadow: rgba(0,0,0,.3) 0 1px 2px;
 }
 * + p {
   margin-top: .5em;
@@ -133,11 +134,11 @@ header a {
   padding: 0 .5rem;
 }
 header a.active {
-  color: darkgreen;
+  color: #D9C1B3;
 }
 header a:hover,
 header a:focus {
-  color: green;
+  color: #D9C1B3;
 }
 [data-button] {
   border-radius: 4px !important;
@@ -154,8 +155,9 @@ header a:focus {
   font-weight: 400;
   letter-spacing: -.02em;
 }
-#brand strong {
-  font-weight: 900;
+#brand svg {
+  width: 100%;
+  height: 23px;
 }
 nav {
   display: block;
@@ -164,7 +166,7 @@ nav {
 footer {
   padding: 2rem 1rem;
   text-align: center;
-  color: darkgreen;
+  color: #777;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -192,26 +194,29 @@ aside {
 }
 aside h1,
 aside h2 {
+  color: white;
   display: inline-block;
   margin: 0;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-top: 20vh;
+  margin-bottom: 0;
   padding: 1rem;
   background: rgba(0,0,0,.75);
-  color: white;
   transition: all .2s ease-in-out;
 }
-aside h1 {
+aside hr + h2 {
+  margin-top: 0;
+}
+.family h1 {
   font-size: 175%;
+  margin-bottom: 0;
 }
 aside h2 {
   font-size: 350%;
   line-height: 1;
+  margin-bottom: 0;
 }
 aside a {
-  color: green;
+  color: #D9C1B3;
 }
 aside a:hover,
 aside a:focus {
@@ -219,6 +224,18 @@ aside a:focus {
 }
 .toronto {
   background-image: url('../img/toronto.jpg');
+}
+.family {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  padding-top: 10vh;
+  background-image: url('../img/family.jpg');
+  background-position: center 50%;
 }
 .refugees {
   background-image: url('../img/refugees.jpg');
@@ -255,7 +272,7 @@ blockquote p {
 blockquote p strong {
   font-weight: 400;
 }
-@media (min-width: 500px) {
+@media (min-width: 530px) {
   header {
     text-align: right;
     padding: 0;
@@ -275,7 +292,7 @@ blockquote p strong {
   aside {
     text-align: left;
   }
-  aside h1 {
+  .family h1 {
     font-size: 200%;
   }
   aside h2 {
@@ -285,13 +302,16 @@ blockquote p strong {
 @media (min-width: 930px) {
   aside h1,
   aside h2 {
-    margin-top: 25vh;
-    margin-bottom: 10vh;
+    margin-top: 35vh;
     font-size: 300%;
     line-height: 1;
   }
+  .family h1 {
+    margin-bottom: 0;
+  }
   aside h2 {
     font-size: 400%;
+    margin-bottom: 0;
   }
 }
 
