@@ -210,6 +210,9 @@ aside hr + h2 {
   font-size: 175%;
   margin-bottom: 0;
 }
+.family h2 {
+  font-size: 250%;
+}
 aside h2 {
   font-size: 350%;
   line-height: 1;
@@ -235,7 +238,7 @@ aside a:focus {
   background-attachment: scroll;
   padding-top: 10vh;
   background-image: url('../img/family.jpg');
-  background-position: center 50%;
+  background-position: center 30%;
 }
 .refugees {
   background-image: url('../img/refugees.jpg');
@@ -263,6 +266,9 @@ main {
   padding: 2rem;
   margin: 0 auto;
   max-width: 900px;
+}
+blockquote + main {
+  padding-top: 0;
 }
 blockquote p {
   font-size: 200%;
@@ -292,9 +298,6 @@ blockquote p strong {
   aside {
     text-align: left;
   }
-  .family h1 {
-    font-size: 200%;
-  }
   aside h2 {
     font-size: 350%;
   }
@@ -308,7 +311,9 @@ blockquote p strong {
   }
   .family h1 {
     margin-bottom: 0;
+    font-size: 225%;
   }
+  .family h2,
   aside h2 {
     font-size: 400%;
     margin-bottom: 0;
