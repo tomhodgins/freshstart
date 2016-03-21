@@ -87,14 +87,17 @@ h6 {
   font-size: 120%;
 }
 a {
-  color: darkgreen;
+  color: saddlebrown;
   text-decoration: none;
   outline: none !important;
   transition: color .2s ease-in-out;
 }
+p > a {
+  text-decoration: underline !important;
+}
 a:hover,
 a:focus {
-  color: green;
+  color: sienna;
 }
 li {
   font-size: 140%;
@@ -267,12 +270,19 @@ main {
   margin: 0 auto;
   max-width: 900px;
 }
+blockquote.update {
+  font-weight: 400;
+  font-style: normal;
+}
+blockquote.update p {
+  font-size: 160%;
+}
 blockquote + main {
   padding-top: 0;
 }
 blockquote p {
-  font-size: 200%;
   font-style: italic;
+  font-size: 200%;
   font-weight: 300;
 }
 blockquote p strong {
@@ -335,4 +345,54 @@ blockquote p strong {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* To-Do List */
+[data-list] {
+  max-width: 600px;
+  margin: 3em auto;
+  background: white;
+  box-shadow: rgba(0,0,0,.15) 5px 10px 30px;
+  padding: 1em 3em;
+}
+[data-list] label {
+  display: block;
+  padding: 1em;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  padding-left: 50px;
+}
+[data-list] label:last-of-type {
+  margin-bottom: 0;
+}
+[data-list] input {
+  display: none;
+}
+[data-list] input:checked + span {
+  opacity: .3;
+  text-decoration: line-through;
+}
+[data-list] span {
+  font-size: 18pt;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: opacity .5s ease-in-out;
+}
+[data-list] span:before {
+  content: '\f372';
+  font-family: 'ionicons';
+  position: absolute;
+  top: 11.25pt;
+  left: 0;
+  font-size: 24pt;
+  line-height: 1;
+}
+[data-list] input:checked + span:before {
+  content: '\f373';
+}
+[data-list] [data-button] {
+  margin: 0 0 0 .5em;
+  padding: .4em .6em !important;
+  font-size: 12pt;
 }
