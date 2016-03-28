@@ -353,7 +353,8 @@ blockquote p strong {
   margin: 3em auto;
   background: white;
   box-shadow: rgba(0,0,0,.15) 5px 10px 30px;
-  padding: 1em 3em;
+  padding: 1em 2em;
+  text-align: left;
 }
 [data-list] label {
   display: block;
@@ -374,7 +375,7 @@ blockquote p strong {
   text-decoration: line-through;
 }
 [data-list] span {
-  font-size: 18pt;
+  font-size: 12pt;
   line-height: 1.3;
   cursor: pointer;
   transition: opacity .5s ease-in-out;
@@ -385,7 +386,7 @@ blockquote p strong {
   position: absolute;
   top: 11.25pt;
   left: 0;
-  font-size: 24pt;
+  font-size: 18pt;
   line-height: 1;
 }
 [data-list] input:checked + span:before {
@@ -394,5 +395,16 @@ blockquote p strong {
 [data-list] [data-button] {
   margin: 0 0 0 .5em;
   padding: .4em .6em !important;
-  font-size: 12pt;
+  font-size: 10pt;
+}
+@media (min-width: 600px) {
+  [data-list] span {
+    font-size: 18pt;
+  }
+  [data-list] span:before {
+    font-size: 24pt;
+  }
+  [data-list] [data-button] {
+    font-size: 12pt;
+  }
 }
